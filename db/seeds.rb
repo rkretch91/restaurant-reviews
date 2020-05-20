@@ -12,8 +12,9 @@ Restaurant.destroy_all
   name = Faker::Hipster.word
   address = Faker::Address.street_address
   rating = rand(1..5)
+  chef_name = Faker::FunnyName.name
 
-  Restaurant.create(name: name, address: address, rating: rating)
+  Restaurant.create(name: name, address: address, rating: rating, chef_name: chef_name)
   puts "Restaurant #{name} created"
 end
 
